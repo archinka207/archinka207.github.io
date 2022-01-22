@@ -1,0 +1,48 @@
+.settings {
+    position: relative;
+    padding-top: 10px;
+    padding-left: 260px;
+    min-height: calc(100vh - 97px);
+}
+
+.form {
+    margin-top: 12px;
+}
+
+.word-input-button {
+    background-color: #2a3c63;
+    border-radius: 8px;
+    color: #0bf387;
+    border: 2px solid #0bf387;
+    padding: 4px 10px;
+    text-align: center;
+    display: inline-flex;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.word-input-button:hover {
+    background-color: rgb(34, 33, 49);
+    color: white;
+}
+
+.text-input {
+    background-color: #2a3c63;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: #0bf387; 
+    border-radius: 0.5rem
+}
+
+.settings-text {
+    font-family:sans-serif;
+    color: rgb(231, 231, 231);
+}
+
+.arr--select {
+    color: #0bf387;
+    background-color: #2a3c63;
+    border-radius: 0.3rem;
+    width: 200px;
+    height: 22px;
+}

@@ -1,0 +1,41 @@
+.nav {
+    padding: 1.4em 4.2em ;
+    width: 100%;
+}
+
+.navbar-container {
+    margin-left: 60px;
+    display:inline-block;
+}
+
+.logo {
+    width: 55px;
+    text-align: center;
+    display:inline-block;
+    margin-left: 20px;
+    border: 4px solid #0bf387;
+    border-radius: 18px;
+}
+
+.logo-text {
+    font-size: 150%;
+    color: #0bf387;
+    font-family:sans-serif;
+}
+
+.but-navbar {
+    background-color: #2a3c63;
+    border-radius: 18px;
+    color: #0bf387;
+    border: 2px solid #0bf387;
+    padding: 12px 35px;
+    text-align: center;
+    display: inline-flex;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.but-navbar:hover {
+    background-color: rgb(34, 33, 49);
+    color: white;
+}
