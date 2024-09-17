@@ -3,27 +3,27 @@
     <head>
         <meta charset="utf-8">
         <title>Мой сайт</title>
-        <link rel="stylesheet" href="/stile.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
        <header>
             <h1>Food Construct</h1>
             <nav>
                 <ul class="nav-list">
-                    <li class="nav-item"><a>О нас</a></li>
-                    <li class="nav-item"><a>Собрать ланч</a></li>
-                    <li class="nav-item"><a>Заказы</a></li>
-                    <li class="nav-item"><a>Контакты</a></li>
+                    <li class="nav-item"><a href="#about">О нас</a></li>
+                    <li class="nav-item"><a href="#advant">Собрать ланч</a></li>
+                    <li class="nav-item"><a href="#tbl">Заказы</a></li>
+                    <li class="nav-item"><a href="#footer">Контакты</a></li>
                 </ul>
             </nav>
        </header>
        <main>
-            <img src="/img/image.png" alt="food">
-            <section class="aboutus">
+            <img src="/img/image.png" alt="food" id="food_image">
+            <section class="aboutus" id="about">
                 <h1>О нас</h1>
                 <p>Food Construct - доставка бизнес-ланчей в Москве. Мы привезем вам горячую вкусную еду в любую точку города к назначенному времени.</p>
             </section>
-            <section class="advantages">
+            <section class="advantages" id="advant">
                 <h1>Преимущества Food Construct</h1>
                 <ul>
                     <li>Привозим обед к назначенному времени без опозданий</li>
@@ -31,8 +31,8 @@
                     <li>Доставляем ланчи весь день с 7:00 до 23:00</li>
                 </ul>
             </section>
-            <section class="top">
-                <table class="iksweb">
+            <section class="top" id="tbl">
+                <table class="table">
                     <tbody>
                         <tr>
                             <td></td>
@@ -74,7 +74,7 @@
                 </table>
             </section>
        </main>
-       <footer>
+       <footer id="footer">
             <p>Позвонить нам +7-111-111-11-11</p>
        </footer>
     </body>
