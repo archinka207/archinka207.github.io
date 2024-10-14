@@ -2,76 +2,99 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Мой сайт</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="base_style.css">
+        <link rel="stylesheet" href="about_us_style.css">
     </head>
     <body>
        <header>
-            <h1>Food Construct</h1>
+            <h1>All the best</h1>
             <nav>
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#about">О нас</a></li>
-                    <li class="nav-item"><a href="#advant">Собрать ланч</a></li>
+                    <li class="nav-item"><a href="lunch.html">Собрать ланч</a></li>
                     <li class="nav-item"><a href="#tbl">Заказы</a></li>
                     <li class="nav-item"><a href="#footer">Контакты</a></li>
                 </ul>
             </nav>
        </header>
        <main>
-            <img src="/img/image.png" alt="food" id="food_image">
-            <section class="aboutus" id="about">
-                <h1>О нас</h1>
-                <p>Food Construct - доставка бизнес-ланчей в Москве. Мы привезем вам горячую вкусную еду в любую точку города к назначенному времени.</p>
+            <section class="scroll-new-menue-item">
+                <h1>Новинки в меню</h1>
+                <div class="new-menue-item-link-block">
+                    <div class="new-menue-item-img">
+                        <img src="img/crayfish.jpg" alt="meal">
+                    </div>
+                    <div class="about-new-menue-item">
+                        <p>Рак с овощами</p> 
+                        <p>цена 10</p>
+                    </div>
+                </div>
             </section>
-            <section class="advantages" id="advant">
-                <h1>Преимущества Food Construct</h1>
-                <ul>
-                    <li>Привозим обед к назначенному времени без опозданий</li>
-                    <li>Надежно упаковываем блюда в удобные контейнеры бесплатно</li>
-                    <li>Доставляем ланчи весь день с 7:00 до 23:00</li>
-                </ul>
+            <section class="about-us">
+                <div class="about-us-block">
+                    <h1>О нас</h1>
+                    <p>Food Construct - доставка бизнес-ланчей в Москве. Мы привезем вам 
+                        горячую вкусную еду в любую точку города к назначенному времени.</p>
+                </div>
             </section>
-            <section class="top" id="tbl">
-                <table class="table">
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td>Название</td>
-                            <td>Кол-во заказов в неделю</td>
-                            <td>Цена</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Бургер</td>
-                            <td>248</td>
-                            <td>160р</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Пицца</td>
-                            <td>120</td>
-                            <td>500р</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Лазанья</td>
-                            <td>60</td>
-                            <td>300р</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Котлеты из курицы</td>
-                            <td>150</td>
-                            <td>120р</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Том ям</td>
-                            <td>70</td>
-                            <td>400р</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <section class="menue" id="tbl">
+                <h1>Меню</h1>
+                <div class="table-container">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>Название</td>
+                                <td>Кол-во заказов в неделю</td>
+                                <td>Цена</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Бургер</td>
+                                <td>248</td>
+                                <td>160р</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Пицца</td>
+                                <td>120</td>
+                                <td>500р</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Лазанья</td>
+                                <td>60</td>
+                                <td>300р</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Котлеты из курицы</td>
+                                <td>150</td>
+                                <td>120р</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Том ям</td>
+                                <td>70</td>
+                                <td>400р</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="advantages">
+                <div class="advantages-block">
+                    <h1>Преимущества All the best</h1>
+                    <div>
+                        <ul>
+                            <li>Привозим обед к назначенному времени без опозданий</li>
+                            <li>Надежно упаковываем блюда в удобные контейнеры бесплатно</li>
+                            <li>Доставляем ланчи весь день с 7:00 до 23:00</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
        </main>
        <footer id="footer">

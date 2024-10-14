@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Мой сайт</title>
+        <link rel="stylesheet" href="base_style.css">
+        <link rel="stylesheet" href="lunch_style.css">
+    </head>
+    <body>
+        <header>
+            <h1>All the best</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html">О нас</a></li>
+                    <li class="nav-item"><a href="lunch.html">Собрать ланч</a></li>
+                    <li class="nav-item"><a href="#tbl">Заказы</a></li>
+                    <li class="nav-item"><a href="#footer">Контакты</a></li>
+                </ul>
+            </nav>
+       </header>
+       <main>
+            <section class="soup">
+                <h2>Выберите суп</h2>
+                <div class="dishes">
+                    <div class="dish">
+                        <div class="product-image">
+                            <img src="img/food.png" alt="dish" >
+                        </div>
+                        <p>123&#8381;</p>
+                        <p>еда</p>
+                        <div class="dishes-gap">
+                            <p class="weight_paragrapf">вес: 30г</p>
+                            <button class="dish-buy-button">добавить</button>
+                        </div>         
+                    </div>
+                    <div class="dish">
+                        <div class="product-image">
+                            <img src="img/food.png" alt="dish" >
+                        </div>
+                        <p>123&#8381;</p>
+                        <p>еда</p>
+                        <div class="dishes-gap">
+                            <p class="weight_paragrapf">вес: 30г</p>
+                            <button class="dish-buy-button">добавить</button>
+                        </div>         
+                    </div>
+                    <div class="dish">
+                        <div class="product-image">
+                            <img src="img/food.png" alt="dish" >
+                        </div>
+                        <p>123&#8381;</p>
+                        <p>еда</p>
+                        <div class="dishes-gap">
+                            <p class="weight_paragrapf">вес: 30г</p>
+                            <button class="dish-buy-button">добавить</button>
+                        </div>         
+                    </div>
+                </div>
+            </section>
+            <section class="soup">
+                <h2>Выберите главное блюдо</h2>
+                <div class="dishes">
+                    <div class="dish">
+                        <div class="product-image">
+                            <img src="img/food.png" alt="dish" >
+                        </div>
+                        <p>123&#8381;</p>
+                        <p>еда</p>
+                        <div class="dishes-gap">
+                            <p class="weight_paragrapf">вес: 30г</p>
+                            <button class="dish-buy-button">добавить</button>
+                        </div>         
+                    </div>
+                    <div class="dish">
+                        <div class="product-image">
+                            <img src="img/food.png" alt="dish" >
+                        </div>
+                        <p>123&#8381;</p>
+                        <p>еда</p>
+                        <div class="dishes-gap">
+                            <p class="weight_paragrapf">вес: 30г</p>
+                            <button class="dish-buy-button">добавить</button>
+                        </div>         
+                    </div>
+                    <div class="dish">
+                        <div class="product-image">
+                            <img src="img/food.png" alt="dish" >
+                        </div>
+                        <p>123&#8381;</p>
+                        <p>еда</p>
+                        <div class="dishes-gap">
+                            <p class="weight_paragrapf">вес: 30г</p>
+                            <button class="dish-buy-button">добавить</button>
+                        </div>         
+                    </div>
+                </div>
+            </section>
+            <section class="soup">
+                <h2>Выберите напиток</h2>
+                <div class="dishes">
+                    <div class="dish">
+                        <div class="product-image">
+                            <img src="img/food.png" alt="dish" >
+                        </div>
+                        <p>123&#8381;</p>
+                        <p>еда</p>
+                        <div class="dishes-gap">
+                            <p class="weight_paragrapf">вес: 30г</p>
+                            <button class="dish-buy-button">добавить</button>
+                        </div>         
+                    </div>
+                    <div class="dish">
+                        <div class="product-image">
+                            <img src="img/food.png" alt="dish" >
+                        </div>
+                        <p>123&#8381;</p>
+                        <p>еда</p>
+                        <div class="dishes-gap">
+                            <p class="weight_paragrapf">вес: 30г</p>
+                            <button class="dish-buy-button">добавить</button>
+                        </div>         
+                    </div>
+                    <div class="dish">
+                        <div class="product-image">
+                            <img src="img/food.png" alt="dish" >
+                        </div>
+                        <p>123&#8381;</p>
+                        <p>еда</p>
+                        <div class="dishes-gap">
+                            <p class="weight_paragrapf">вес: 30г</p>
+                            <button class="dish-buy-button">добавить</button>
+                        </div>         
+                    </div>
+                </div>
+            </section>
+
+            <div class="make-order">
+                <div class="container">
+                    <h2>Сделать заказ</h2>
+                </div>
+                <form action="https://httpbin.org/post" method="POST" class="buy-form">
+                    <div class="orderPart">
+                        <h3>Ваш заказ</h3>
+                        <div>
+                            <label for="soupChoice">Суп</label>
+                            <select name="soupChoice" id="soupChoice">
+                                <option value="">-- Выберите суп --</option>
+                                <option value="soup1">Суп1</option>
+                                <option value="soup2">Суп1</option>
+                                <option value="soup3">Суп1</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="mainDishChoice">Главное блюдо</label>
+                            <select name="mainDishChoice" id="mainDishChoice">
+                                <option value="">-- Выберите главное блюдо --</option>
+                                <option value="mainDish1">Жареная картошка с грибами</option>
+                                <option value="mainDish2">Лазанья</option>
+                                <option value="mainDish3">Котлеты из курицы с картофельным пюре</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="drinkChoice">Напиток</label>
+                            <select name="drinkChoice" id="drinkChoice">
+                                <option value="">-- Выберите напиток --</option>
+                                <option value="drink1">Яблочный сок</option>
+                                <option value="drink2">Апельсиновый сок</option>
+                                <option value="drink3">Морковный сок</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="commentForOrder">Комментарии к заказу</label>
+                            <textarea name="commentForOrder" id="commentForOrder"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="userDataPart">
+                        <h3>Ваши данные</h3>
+                        <div>
+                            <label for="userName">Имя</label>
+                            <input type="text" name="userName" id="userName" required>
+                        </div>
+                        
+                        <div>
+                            <label for="userEmail">Email</label>
+                            <input type="email" name="userEmail" id="userEmail" required>
+                        </div>
+
+                        <div class="broadcastDiv">
+                            <input type="checkbox" name="isGetBroadcasting" id="isGetBroadcasting" value="true" checked>
+                            <label for="isGetBroadcasting">Получать информацию о скидках и акциях</label>
+                        </div>
+
+                        <div>
+                            <label for="userPhoneNumber">Номер телефона</label>
+                            <input type="tel" name="userPhoneNumber" id="userPhoneNumber" required>
+                        </div>
+
+                        <div>
+                            <label for="">Адрес доставки</label>
+                            <input type="text" name="" id="" required>
+                            <p>Доставка осуществляется только по Москве</p>
+                        </div>
+
+                        <div>
+                            <fieldset>
+                                <legend>Время доставки</legend>
+                                <div>
+                                    <input type="radio" name="deliverySpeed" id="fast" value="1" required>
+                                    <label for="fast">Как можно скорее</label>
+                                </div>
+                                
+                                <div>
+                                    <input type="radio" name="deliverySpeed" id="inTime" value="2" required>
+                                    <label for="inTime">К указанному времени</label>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div>
+                            <label for="deliveryTime">Укажите время доставки</label>
+                            <input type="time" name="deliveryTime" id="deliveryTime" min="7:00" max="23:00" step="300">
+                            <p>Доступное время доставки с 7:00 до 23:00</p>
+                        </div>
+
+                        <div class="buttons">
+                            <div>
+                                <button type="reset">Сбросить</button>
+                            </div>
+
+                            <div>
+                                <button type="submit">Отправить</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+       </main>
+       <footer id="footer">
+        <p>Позвонить нам +7-111-111-11-11</p>
+        </footer>
+    </body>
+</html>
