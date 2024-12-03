@@ -5,6 +5,8 @@
     padding: 0;
 }
 body{
+    display: flex;
+    flex-direction: column;
     font-family: "Roboto", sans-serif;
     background-color: rgb(15, 15, 15);
     color: #e6e6e6;
@@ -36,6 +38,7 @@ ul {
 }
 
 footer {
+    width: 100%;
     padding: 60px 100px;
     height: 120px;
     background-color: #0b0909;
