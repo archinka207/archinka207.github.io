@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Мой сайт</title>
         <link rel="stylesheet" href="base_style.css">
-        <link rel="stylesheet" href="lunch_style.css">>
+        <link rel="stylesheet" href="lunch_style.css">
     </head>
     <script type="module" defer src="Myscripts.js"></script>
     <body>
@@ -22,19 +22,45 @@
        </header>
 
         <main>
-
             <h2 class="label1">Выберите суп</h2>
-
+            <div class="filters" id="soupFilters">
+                <button class="filterButton" data-kind="fish">рыбный</button>
+                <button class="filterButton" data-kind="meat">мясной</button>
+                <button class="filterButton" data-kind="veg">вегетарианский</button>
+            </div>
             <div class="dishes soupes" id="soupes"></div>
 
             <h2 class="label2">Выберите главное блюдо</h2>
-
+            <div class="filters" id="mainFilters">
+                <button class="filterButton" data-kind="fish">рыбное</button>
+                <button class="filterButton" data-kind="meat">мясное</button>
+                <button class="filterButton" data-kind="veg">вегетарианское</button>
+            </div>
             <div class="dishes main" id="main"></div>
 
+            <h2>Выберите салат или стартер</h2>
+            <div class="filters" id="saladFilters">
+                <button class="filterButton" data-kind="fish">рыбный</button>
+                <button class="filterButton" data-kind="meat">мясной</button>
+                <button class="filterButton" data-kind="veg">вегетарианский</button>
+            </div>
+            <div class="dishes" id="salads"></div>
+
             <h2 class="label3">Выберите напиток</h2>
+            <div class="filters" id="drinkFilters">
+                <button class="filterButton" data-kind="cold">холодный</button>
+                <button class="filterButton" data-kind="hot">горячий</button>
+            </div>
+            <div class="dishes" id="drinks"></div>  
 
-            <div class="dishes drinks" id="drinks"></div>
-
+            <h2>Выберите десерт</h2>
+            <div class="filters" id="dessertFilters">
+                <button class="filterButton" data-kind="small">маленькая порция</button>
+                <button class="filterButton" data-kind="middle">средняя порция</button>
+                <button class="filterButton" data-kind="big">большая порция</button>
+            </div>
+            <div class="dishes" id="desserts"></div>
+            
             <div class="make-order">
                 <h2>Сделать заказ</h2>
                 <form action="https://httpbin.org/post" method="POST">

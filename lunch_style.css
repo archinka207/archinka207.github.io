@@ -17,6 +17,14 @@ main > section {
     gap: 30px;
 }
 
+
+.filterButton {
+    background-color: #76417f4c;
+    color:azure;
+    border-radius: 20%;
+    border: none;
+}
+
 .dish{
     display: flex;
     flex-direction: column;
