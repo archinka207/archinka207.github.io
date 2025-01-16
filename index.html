@@ -4,102 +4,62 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Мой сайт</title>
-        <link rel="stylesheet" href="base_style.css">
-        <link rel="stylesheet" href="about_us_style.css">
+        <link rel="stylesheet" href="main_page_style.css">
     </head>
-    <script type="module" defer src="Myscripts.js"></script>
     <body>
-       <header>
-            <h1>All the best</h1>
-            <nav>
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#about">О нас</a></li>
-                    <li class="nav-item"><a href="lunch.html">Собрать ланч</a></li>
-                    <li class="nav-item"><a href="#tbl">Заказы</a></li>
-                    <li class="nav-item"><a href="#footer">Контакты</a></li>
-                </ul>
-            </nav>
-       </header>
-       <main>
-            <section class="scroll-new-menue-item">
-                <h1>Новинки в меню</h1>
-                <div class="new-menue-item-link-block">
-                    <div class="new-menue-item-img">
-                        <img src="img/crayfish.jpg" alt="meal">
-                    </div>
-                    <div class="about-new-menue-item">
-                        <p>Рак с овощами</p> 
-                        <p>цена 10</p>
-                    </div>
+        <header>
+            <div class="header-container">
+                <h1>My web</h1>
+                <form class="search-form" action="/search" method="get">
+                    <input type="text" class="search-input" name="q" placeholder="Введите запрос...">
+                    <button type="submit" class="search-button">Найти</button>
+                </form>
+                <div class="header-icons-container">
+                    <a>1</a>
+                    <a>2</a>
                 </div>
-            </section>
-            <section class="about-us">
-                <div class="about-us-block">
-                    <h1>О нас</h1>
-                    <p>Food Construct - доставка бизнес-ланчей в Москве. Мы привезем вам 
-                        горячую вкусную еду в любую точку города к назначенному времени.</p>
-                </div>
-            </section>
-            <section class="menue" id="tbl">
-                <h1>Меню</h1>
-                <div class="table-container">
-                    <table class="table">
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td>Название</td>
-                                <td>Кол-во заказов в неделю</td>
-                                <td>Цена</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Бургер</td>
-                                <td>248</td>
-                                <td>160р</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Пицца</td>
-                                <td>120</td>
-                                <td>500р</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Лазанья</td>
-                                <td>60</td>
-                                <td>300р</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Котлеты из курицы</td>
-                                <td>150</td>
-                                <td>120р</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Том ям</td>
-                                <td>70</td>
-                                <td>400р</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-            <section class="advantages">
-                <div class="advantages-block">
-                    <h1>Преимущества All the best</h1>
+            </div>
+        </header>
+        <main>
+            <div class="main-container">
+                <div class="filters">
                     <div>
-                        <ul>
-                            <li>Привозим обед к назначенному времени без опозданий</li>
-                            <li>Надежно упаковываем блюда в удобные контейнеры бесплатно</li>
-                            <li>Доставляем ланчи весь день с 7:00 до 23:00</li>
-                        </ul>
+                        <h2>Категории</h2>
+                        <div>
+                            <label><input type="checkbox"> Категория 1</label>
+                            <label><input type="checkbox"> Категория 2</label>
+                            <label><input type="checkbox"> Категория 3</label>
+                            <label><input type="checkbox"> Категория 4</label>
+                            <label><input type="checkbox"> Категория 5</label>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Стоимость</h2>
+                        <div>
+                            <label>От <input type="number" id="minPrice" value="100"></label>
+                            <label>До <input type="number" id="maxPrice" value="5000"></label>
+                        </div>
+                    </div>
+                    <div>
+                        <label><input type="checkbox"> Только товары со скидками</label>
+                    </div>
+                    <button >Применить</button>
+                </div>
+                <div class="items">
+                    <div class="catalogue">
+                        <h2>Каталог</h2>
+                        <div class="custom-select">
+                            <select id="sort">
+                                <option value="ratingDesc">По убыванию рейтинга</option>
+                                <option value="ratingAsc">По возрастанию рейтинга</option>
+                                <option value="priceDesc">По убыванию цены</option>
+                                <option value="priceAsc">По возрастанию цены</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </section>
-       </main>
-       <footer id="footer">
-            <p>Позвонить нам +7-111-111-11-11</p>
-       </footer>
+            </div>
+        </main>
     </body>
+    <script type="module" src="api_scr.js"></script>
 </html>
