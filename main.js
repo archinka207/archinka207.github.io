@@ -3,29 +3,28 @@
 const key = "?api_key=d6d50fc0-628f-4069-b854-bf25968b4cad"; // Убрал "?", так как это, скорее всего, часть пути
 const address = "http://api.std-900.ist.mospolytech.ru";
 
+let itemsData = []; // Объявляем переменную в глобальной области видимости
+
 async function fetchData() {
-    const URL = `${address}/exam-2024-1/api/goods${key}`; // Используем шаблонные строки
+    const URL = `${address}/exam-2024-1/api/goods${key}`;
 
     try {
         const response = await fetch(URL);
 
-        // Проверяем, что ответ успешный
         if (!response.ok) {
             throw new Error(`Ошибка HTTP: ${response.status}`);
         }
 
-        // Парсим JSON
         const data = await response.json();
-        console.log("Данные получены:", data); // Выводим данные в консоль
-        return data; // Возвращаем данные
+        console.log("Данные получены:", data);
+        return data;
     } catch (err) {
-        console.error("Не удалось получить товары:", err); // Логируем ошибку
-        throw err; // Пробрасываем ошибку дальше, если нужно
+        console.error("Не удалось получить товары:", err);
+        throw err;
     }
 }
 
 function createItemCard(data) {
-    // Создаем карточку
     const card = document.createElement("div");
     card.className = "itemCard";
     card.dataset.id = data.id;
@@ -59,7 +58,6 @@ function createItemCard(data) {
     return card;
 }
 
-// Функция для отображения звезд рейтинга
 function renderStars(rating) {
     const fullStars = Math.round(rating);
     let starsHTML = "";
@@ -74,19 +72,54 @@ function renderStars(rating) {
 
 async function renderCards() {
     const itemsContainer = document.querySelector(".items");
-    const data = await fetchData();
+    itemsData = await fetchData(); // Сохраняем данные в глобальную переменную
 
-    if (data.length === 0) {
+    if (itemsData.length === 0) {
         itemsContainer.innerHTML = "<p>Товары не найдены.</p>";
         return;
     }
 
-    data.forEach(item => {
-        console.log(data.length);
-        console.log("hi hi hi hi")
+    updateItemsDisplay(itemsData); // Отображаем карточки
+}
+
+function updateItemsDisplay(items) {
+    const itemsContainer = document.querySelector(".items");
+    itemsContainer.innerHTML = ""; // Очищаем контейнер
+
+    items.forEach(item => {
         const card = createItemCard(item);
         itemsContainer.appendChild(card);
     });
 }
 
+function sortItems(sortType) {
+    let sortedItems = [...itemsData]; // Используем глобальную переменную itemsData
+
+    switch (sortType) {
+        case "ratingDesc":
+            sortedItems.sort((a, b) => b.rating - a.rating);
+            break;
+        case "ratingAsc":
+            sortedItems.sort((a, b) => a.rating - b.rating);
+            break;
+        case "priceDesc":
+            sortedItems.sort((a, b) => b.actual_price - a.actual_price);
+            break;
+        case "priceAsc":
+            sortedItems.sort((a, b) => a.actual_price - b.actual_price);
+            break;
+        default:
+            break;
+    }
+
+    updateItemsDisplay(sortedItems); // Обновляем отображение
+}
+
+// Добавляем обработчик события для сортировки
+document.getElementById("sort").addEventListener("change", (event) => {
+    const sortType = event.target.value;
+    sortItems(sortType);
+});
+
+// Инициализация
 renderCards();
