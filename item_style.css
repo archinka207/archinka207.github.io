@@ -1,0 +1,108 @@
+.items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Стили для карточки товара */
+.itemCard {
+    width: 250px;
+    border: 1px solid #e0e0e0; /* Граница карточки */
+    border-radius: 8px; /* Закругленные углы */
+    overflow: hidden; /* Скрываем содержимое, выходящее за пределы карточки */
+    background-color: #fff; /* Фон карточки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для карточки */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Анимация при наведении */
+    margin-bottom: 15px;
+}
+
+.itemCard:hover {
+    transform: translateY(-5px); /* Поднимаем карточку при наведении */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Увеличиваем тень */
+}
+
+/* Стили для изображения товара */
+.itemImg img {
+    width: 100%; /* Ширина изображения на всю карточку */
+    height: 200px; /* Фиксированная высота изображения */
+    object-fit: cover; /* Обрезаем изображение, чтобы оно заполнило контейнер */
+    border-bottom: 1px solid #e0e0e0; /* Граница под изображением */
+}
+
+/* Стили для текстового содержимого карточки */
+.itemAttributes {
+    padding: 16px; /* Отступы внутри карточки */
+}
+
+.itemName {
+    font-size: 18px; /* Размер шрифта названия */
+    font-weight: bold; /* Жирный шрифт */
+    margin: 0 0 10px 0; /* Отступ снизу */
+    color: #333; /* Цвет текста */
+}
+
+/* Стили для рейтинга */
+.itemRating {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Расстояние между звездами */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.ratingValue {
+    font-size: 14px;
+    color: #666;
+}
+
+.star {
+    color: #ccc; /* Цвет неактивных звезд */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.star.active {
+    color: #ffd700; /* Цвет активных звезд */
+}
+
+/* Стили для цен и скидки */
+.itemPriceAndDiscount {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Расстояние между элементами */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.oldPrice {
+    font-size: 16px;
+    color: #999;
+    text-decoration: line-through; /* Зачеркнутый текст */
+}
+
+.discount {
+    font-size: 16px;
+    color: #f00; /* Красный цвет для скидки */
+    font-weight: bold;
+}
+
+/* Стили для кнопки */
+button {
+    width: 100%; /* Ширина кнопки на всю карточку */
+    background-color: #007bff; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease; /* Анимация при наведении */
+}
+
+button:hover {
+    background-color: #0056b3; /* Цвет фона при наведении */
+}
