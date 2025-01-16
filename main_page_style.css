@@ -20,6 +20,10 @@ body{
 
 }
 
+main {
+    flex:1;
+}
+
 footer{
     display: flex;
     align-items: center;

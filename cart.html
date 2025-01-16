@@ -1,30 +1,77 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Корзина</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Подключение стилей -->
+    <title>Корзина - Web Shop</title>
+    <link rel="stylesheet" href="main_page_style.css">
+    <link rel="stylesheet" href="cart_style.css">
 </head>
 <body>
     <header>
-        <h1>Корзина</h1>
-        <a href="index.html">Вернуться к товарам</a>
-    </header>
-
-    <main>
-        <div class="cart-items">
-            <!-- Товары будут добавляться сюда -->
+        <div class="header-container">
+            <h1>Web Shop</h1>
+            <div class="header-icons-container">
+                <a href="index.html" class="icon-link">
+                    <img src="img/icons/home.svg" alt="Главная">
+                </a>
+                <a href="profile.html" class="icon-link">
+                    <img src="img/icons/icon.svg" alt="Личный кабинет">
+                </a>
+            </div>
         </div>
+    </header>
+    <main>
+        <div class="cart-container">
+            <h2>Корзина</h2>
+            <div class="cart-items" id="cart-items">
+                <!-- Сюда будут добавляться товары из корзины -->
+            </div>
+            <div class="empty-cart-message" id="empty-cart-message">
+                Корзина пуста. Перейдите в каталог, чтобы добавить товары.
+            </div>
+            <div class="checkout-form">
+                <h2>Оформление заказа</h2>
+                <form id="checkout-form">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
 
-        <div class="cart-summary">
-            <h2>Итого:</h2>
-            <p>Товаров: <span id="total-items">0</span></p>
-            <p>Сумма: <span id="total-price">0₽</span></p>
-            <button id="checkout-button">Оформить заказ</button>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Телефон:</label>
+                    <input type="text" id="phone" name="phone" required>
+
+                    <label for="address">Адрес доставки:</label>
+                    <input type="text" id="address" name="address" required>
+
+                    <label for="delivery-date">Дата доставки:</label>
+                    <input type="date" id="delivery-date" name="delivery-date" required>
+
+                    <label for="delivery-time">Временной интервал доставки:</label>
+                    <select id="delivery-time" name="delivery-time" required>
+                        <option value="09:00-12:00">09:00 - 12:00</option>
+                        <option value="12:00-15:00">12:00 - 15:00</option>
+                        <option value="15:00-18:00">15:00 - 18:00</option>
+                        <option value="18:00-21:00">18:00 - 21:00</option>
+                    </select>
+
+                    <label for="comment">Комментарий к заказу:</label>
+                    <textarea id="comment" name="comment" rows="4"></textarea>
+
+                    <label>
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        Согласие на получение рассылки
+                    </label>
+
+                    <button type="submit">Оформить заказ</button>
+                </form>
+            </div>
         </div>
     </main>
-
-    <script src="cart.js"></script> <!-- Подключение JavaScript -->
+    <footer>
+        <div><p>&#169; Web Shop. Все права защищены</p></div>
+    </footer>
+    <script src="cart.js"></script>
 </body>
 </html>

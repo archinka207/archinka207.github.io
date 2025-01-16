@@ -1,9 +1,30 @@
-"use strict"
+"use strict";
 
-const key = "?api_key=d6d50fc0-628f-4069-b854-bf25968b4cad"; // Убрал "?", так как это, скорее всего, часть пути
+const key = "?api_key=d6d50fc0-628f-4069-b854-bf25968b4cad";
 const address = "http://api.std-900.ist.mospolytech.ru";
 
-let itemsData = []; // Объявляем переменную в глобальной области видимости
+let itemsData = []; // Массив для хранения данных о товарах
+let cart = []; // Массив для хранения товаров в корзине
+
+// Функция для сохранения корзины в localStorage
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// Функция для загрузки корзины из localStorage
+function loadCart() {
+    const savedCart = localStorage.getItem("cart");
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+    }
+}
+
+// Функция для добавления товара в корзину
+function addToCart(item) {
+    cart.push(item);
+    saveCart();
+    alert(`Товар "${item.name}" добавлен в корзину!`);
+}
 
 async function fetchData() {
     const URL = `${address}/exam-2024-1/api/goods${key}`;
@@ -52,9 +73,14 @@ function createItemCard(data) {
                 ${oldPrice ? `<p class="oldPrice">${oldPrice}</p>` : ""}
                 ${discount ? `<p class="discount">${discount}</p>` : ""}
             </div>
-            <button>Добавить</button>
+            <button class="add-to-cart">Добавить</button>
         </div>
     `;
+
+    // Добавляем обработчик события для кнопки "Добавить"
+    const addButton = card.querySelector(".add-to-cart");
+    addButton.addEventListener("click", () => addToCart(data));
+
     return card;
 }
 
@@ -114,6 +140,9 @@ function sortItems(sortType) {
 
     updateItemsDisplay(sortedItems); // Обновляем отображение
 }
+
+// Загружаем корзину при загрузке страницы
+loadCart();
 
 // Добавляем обработчик события для сортировки
 document.getElementById("sort").addEventListener("change", (event) => {
