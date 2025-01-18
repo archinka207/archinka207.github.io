@@ -141,6 +141,50 @@ function sortItems(sortType) {
     updateItemsDisplay(sortedItems); // Обновляем отображение
 }
 
+// Функция для фильтрации товаров
+function filterItems() {
+    // Получаем значения фильтров
+    const minPrice = parseFloat(document.getElementById("minPrice").value) || 0;
+    const maxPrice = parseFloat(document.getElementById("maxPrice").value) || Infinity;
+
+    // Проверяем, отмечен ли чекбокс "Только товары со скидками"
+    const onlyDiscounted = document.querySelector(".filters input[type='checkbox'][id='discount']").checked;
+
+    // Получаем выбранные категории
+    const categoryCheckboxes = document.querySelectorAll(".filters input[type='checkbox'][name='category']");
+    const selectedCategories = Array.from(categoryCheckboxes)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value); // Используем value вместо текста
+
+    // Фильтруем товары
+    const filteredItems = itemsData.filter(item => {
+        const price = item.discount_price || item.actual_price;
+        const isDiscounted = item.discount_price !== null && item.discount_price < item.actual_price;
+
+        // Фильтрация по цене
+        if (price < minPrice || price > maxPrice) {
+            return false;
+        }
+
+        // Фильтрация по скидке
+        if (onlyDiscounted && !isDiscounted) {
+            return false;
+        }
+
+        // Фильтрация по категориям
+        if (selectedCategories.length > 0 && !selectedCategories.includes(item.main_category)) {
+            return false;
+        }
+
+        return true;
+    });
+
+    // Обновляем отображение товаров
+    updateItemsDisplay(filteredItems);
+}
+// Добавляем обработчик события для кнопки "Применить"
+document.querySelector(".filters button").addEventListener("click", filterItems);
+
 // Загружаем корзину при загрузке страницы
 loadCart();
 

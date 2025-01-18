@@ -1,10 +1,5 @@
-.items {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
 .itemCard {
-    width: 250px;
+    width: 300px;
     border: 1px solid #e0e0e0; /* Граница карточки */
     border-radius: 8px; /* Закругленные углы */
     overflow: hidden; /* Скрываем содержимое, выходящее за пределы карточки */
@@ -110,3 +105,14 @@ button {
 button:hover {
     background-color: #0056b3; /* Цвет фона при наведении */
 }
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+
+}
+
+/* Main container adjustment */

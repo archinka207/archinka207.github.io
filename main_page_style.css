@@ -9,6 +9,7 @@ body{
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    justify-content: center;
     font-family: "Roboto", sans-serif;
     background-color: rgb(238, 238, 238);
     color: #272727;
@@ -24,13 +25,15 @@ main {
     flex:1;
 }
 
+
 footer{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 40px;
-    background-color: #007BFF;
+    background-color: #333;
+    color: white;
 }
 
 .header-container {
@@ -175,4 +178,116 @@ footer{
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.main-container {
+    max-width: 1200px;
+    display: flex;
+    gap: 40px;
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .header {
+        width: 100%;
+    }
+    .header-container {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: rgb(248, 141, 47);
+    }
+
+    .main-container {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .catalogue {
+        width: 600px;
+        padding: 10px;
+    }
+
+    .items {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+}
+
+/* Mobile Phones */
+@media (max-width: 576px) {
+
+
+    .header h1 {
+        display: none;
+        visibility: hidden;
+    }
+    .header-container {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(248, 141, 47);
+    }
+
+    .header-icons-container {
+        display: flex;
+        gap: 40px; /* Расстояние между иконками */
+    }
+
+    .main-container {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .catalogue-details{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        background-color: rgb(248, 141, 47);
+        padding: 10px;
+        width: 100vw;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+
+    .catalogue {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        padding: 10px;
+    }
+
+    .items {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }
